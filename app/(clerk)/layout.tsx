@@ -4,8 +4,8 @@ export default function ClerkLayout({
    children: React.ReactNode;
 }) {
    return (
-      <div className="flex items-center justify-center h-full w-full">
-         {children}
+      <div className="bg-black pt-40 w-full h-full flex items-center justify-center">
+       {children}
       </div>
    );
 }
