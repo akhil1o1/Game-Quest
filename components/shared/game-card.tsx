@@ -34,7 +34,7 @@ export default function GameCard({ product }: GameCardProps) {
                {product.tags.length ? (
                   product.tags.splice(0, 2).map((tag) => (
                      <>
-                        <div className="w-1 h-1 bg-[#FF1C1C] rounded-full" />{" "}
+                        <div key={tag} className="w-1 h-1 bg-[#FF1C1C] rounded-full" />{" "}
                         {tag}
                      </>
                   ))

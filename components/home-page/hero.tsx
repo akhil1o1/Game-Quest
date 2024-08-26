@@ -14,7 +14,7 @@ export default function Hero() {
       <section className="p-8 md:pl-40  text-white/80">
          <Carousel showArrows={false} infiniteLoop={true} autoPlay={true}>
             {TITLES.map((title) => (
-               <div className="md:w-[50%]">
+               <div key={title} className="md:w-[50%]">
                   <Details key={title} title={title} />
                </div>
             ))}

@@ -70,7 +70,7 @@ export default function Banner({ product }: BannerProps) {
                </h2>
                <p className={cn("text-lg text-white/80", prostoOne.className)}>
                   Whether you like to dive straight into the fray, support your
-                  teammates, or something in between, there's a spot for you on
+                  teammates, or something in between, there&apos;s a spot for you on
                   the Rift.
                </p>
             </div>

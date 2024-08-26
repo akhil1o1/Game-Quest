@@ -35,28 +35,25 @@ export default function GamesPage() {
    console.log(products);
 
    useEffect(() => {
-      handleFilterAndSort();
-   }, [selectedCategories, sortOption]);
-
-   function handleFilterAndSort() {
       let updatedProducts = [...products];
-
+   
       // Filter by selected categories
       if (selectedCategories.length > 0) {
          updatedProducts = updatedProducts.filter((product) =>
             selectedCategories.includes(product.category)
          );
       }
-
+   
       // Sort by price
       if (sortOption === "lowToHigh") {
          updatedProducts.sort((a, b) => a.price - b.price);
       } else if (sortOption === "highToLow") {
          updatedProducts.sort((a, b) => b.price - a.price);
       }
-
+   
       setFilteredProducts(updatedProducts);
-   }
+   }, [selectedCategories, sortOption, products]);
+   
 
    function handleCategoryChange(category: string) {
       setSelectedCategories((prevSelected) =>

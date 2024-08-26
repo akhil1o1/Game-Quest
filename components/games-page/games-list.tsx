@@ -10,7 +10,7 @@ export default function GamesList({ products }: GamesListProps) {
       <section>
          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {products.map((product) => (
-               <GameCard product={product} />
+               <GameCard key={product.title} product={product} />
             ))}
          </div>
       </section>
